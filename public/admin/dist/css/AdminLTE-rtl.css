@@ -1,0 +1,77 @@
+.main-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+.content-wrapper {
+    margin: 0;
+    margin-right: 228px;
+}
+
+.main-header .logo {
+
+    float: right;
+
+}
+
+.main-header .navbar {
+
+    margin-right: 230px;
+    margin-left: 0;
+
+}
+
+.main-header .sidebar-toggle {
+    float: right;
+
+}
+
+.main-header .navbar-custom-menu, .main-header .navbar-right {
+    float: left;
+}
+
+.sidebar-menu>li>a {
+
+    text-align: right;
+    margin-right: 17px;
+}
+
+.sidebar-menu>li>a>.fa, .sidebar-menu>li>a>.glyphicon, .sidebar-menu>li>a>.ion {
+
+    float: right;
+}
+
+
+
+.treeview-menu>li>a {
+
+    text-align: right;
+    margin-right: 50px;
+}
+
+.treeview-menu>li>a>.fa, .treeview-menu>li>a>.glyphicon, .treeview-menu>li>a>.ion {
+
+    float: right;
+}
+
+
+
+span.pull-right-container {
+    margin-right: 107px;
+}
+
+.content-header>h1 {
+
+    text-align: right;
+}
+
+.content-header>.breadcrumb {
+    float: left;
+
+    position: absolute;
+
+    left: 10px;
+
+}
