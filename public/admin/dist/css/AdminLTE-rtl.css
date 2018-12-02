@@ -75,3 +75,51 @@ span.pull-right-container {
     left: 10px;
 
 }
+
+.box form {
+    text-align: right;
+}
+
+.box-title {
+    float: right;
+}
+
+.form-control {
+
+    text-align: right;
+    direction: rtl;
+}
+
+
+.form-control option {
+
+    direction: rtl;
+}
+.form-group input {
+    float: right;
+}
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: right;
+}
+
+.checkbox, .radio {
+
+    display: inline-block;
+
+}
+
+.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
+
+    text-align: right;
+}
+
+.table {
+
+    direction: rtl;
+}
+
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+
+    text-align: right;
+}

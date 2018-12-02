@@ -19,4 +19,23 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('adminPanel','AdminController@index')->name('adminPanel');
+Route::prefix('adminPanel')->group(function(){
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/login', 'AuthAdmin\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'AuthAdmin\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/logout', 'AuthAdmin\AdminLoginController@logout')->name('admin.logout');
+    Route::get('/product', 'ProductController@index')->name('admin.product.index');
+    Route::get('/addProduct', 'ProductController@add')->name('admin.product.add');
+    Route::post('/saveProduct', 'ProductController@save')->name('admin.product.save');
+});
+
+
+
+
+
+
+
+
+
+
+
