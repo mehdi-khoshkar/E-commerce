@@ -25,7 +25,8 @@ class ProductController extends Controller
             'title'=>$request->input('title'),
             'price'=>$request->input('price'),
             'stock'=>$request->input('stock'),
-            'description'=>$request->input('description')
+            'description'=>$request->input('description'),
+            'thumbnail'=>$request->input('thumbnail')
             ];
 
 

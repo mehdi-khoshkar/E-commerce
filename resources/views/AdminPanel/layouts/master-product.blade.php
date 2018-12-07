@@ -711,16 +711,23 @@
 <script src="../admin/dist/js/adminlte.min.js"></script>
 <!-- Sparkline -->
 <script src="../admin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap  -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
 <!-- SlimScroll -->
 <script src="../admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- ChartJS -->
 <script src="../admin/bower_components/chart.js/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../admin/dist/js/pages/dashboard2.js"></script>
+{{--<script src="../admin/dist/js/pages/dashboard2.js"></script>--}}
 <!-- AdminLTE for demo purposes -->
 <script src="../admin/dist/js/demo.js"></script>
+
+<!-- laravel filemanager -->
+<script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+
+<script type="text/javascript">
+    //my code here
+
+    $('#lfm').filemanager('image');
+</script>
 </body>
 </html>

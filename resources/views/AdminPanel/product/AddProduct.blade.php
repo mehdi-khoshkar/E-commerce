@@ -66,12 +66,23 @@
                 </div>
 
                 <!-- textarea -->
-                <div class="form-group">
-                  <label>توضیحات محصول</label>
-                  <textarea  class="form-control" name="description" value="{{ old('description') }}"  rows="3" placeholder="Enter ..."></textarea>
-                </div>
+                      <div class="form-group">
+                        <label> توضیحات محصول</label>
+                      <textarea id="my-editor" name="description"  value="{{ old('description') }}" class="form-control"></textarea>
+                      <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+                      <script>
+                          var options = {
+                              filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                              filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                              filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                              filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+                          };
+                      </script>
+                      <script>
+                          CKEDITOR.replace('my-editor', options);
+                      </script>
 
-
+                      </div>
                       <div class="box-footer">
                         <button type="submit" name="submit" class="btn btn-primary">ثبت محصول</button>
                       </div>
@@ -93,15 +104,22 @@
 
             <div class="box-body">
 
-
-              <div class="form-group">
-                <input type="file" name ="picProduct" id="picProduct" required>
-                <label for="exampleInputFile">تصویر محصول</label>
-
-
-              </div>
+                <div class="input-group">
+   <span class="input-group-btn">
+     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+       <i class="fa fa-picture-o"></i> Choose
+     </a>
+   </span>
+                  <input id="thumbnail" class="form-control" type="text" name="thumbnail">
+                </div>
+                <img id="holder" style="margin-top:15px;max-height:100px;">
 
             </div>
+
+
+
+
+
 
               <!-- /.box-body -->
 

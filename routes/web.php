@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/',function(){
+    return view('welcome');
+}
+);
 
 Route::prefix('adminPanel')->group(function(){
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
@@ -27,7 +30,12 @@ Route::prefix('adminPanel')->group(function(){
     Route::get('/product', 'ProductController@index')->name('admin.product.index');
     Route::get('/addProduct', 'ProductController@add')->name('admin.product.add');
     Route::post('/saveProduct', 'ProductController@save')->name('admin.product.save');
+
+
 });
+
+
+
 
 
 
