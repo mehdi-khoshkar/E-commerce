@@ -13,6 +13,8 @@ class ProductController extends Controller
         return view('AdminPanel.product.product',compact('productItem'));
     }
 
+
+
     public function add()
     {
         return view('AdminPanel.product.AddProduct');

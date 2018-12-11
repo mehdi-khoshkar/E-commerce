@@ -17,10 +17,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/',function(){
-    return view('welcome');
-}
-);
 
 Route::prefix('adminPanel')->group(function(){
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
@@ -33,6 +29,14 @@ Route::prefix('adminPanel')->group(function(){
 
 
 });
+
+
+    Route::get('/', 'FrontController@index')->name('front.index');
+    Route::get('product/{product}', 'FrontController@showSingleProduct')->name('front.single.product');
+
+
+
+
 
 
 
