@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class ProductController extends Controller
 
     public function add()
     {
-        return view('AdminPanel.product.AddProduct');
+        $category = Category::all();
+        return view('AdminPanel.product.AddProduct',compact('category'));
     }
 
     public function save(Request $request)
@@ -28,7 +30,9 @@ class ProductController extends Controller
             'price'=>$request->input('price'),
             'stock'=>$request->input('stock'),
             'description'=>$request->input('description'),
-            'thumbnail'=>$request->input('thumbnail')
+            'thumbnail'=>$request->input('thumbnail'),
+            'gallery_one'=>$request->input('gallery_one'),
+            'gallery_two'=>$request->input('gallery_two')
             ];
 
 

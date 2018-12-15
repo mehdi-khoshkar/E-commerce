@@ -8,6 +8,10 @@ class Product extends Model
 {
     protected $guarded=['id'];
 
+    public function category()
+    {
+        $this->belongsTo(Category::Class);
+    }
 
 
 }

@@ -58,7 +58,19 @@
                   <span class="input-group-addon">.00</span>
                 </div>
 
+                      <div class="form-group">
+                        <label>دسته بندی</label>
 
+
+                        <select class="form-control">
+
+                          @foreach($category as $item)
+                          <option>{{$item->category_title}}</option>
+
+                          @endforeach
+                        </select>
+
+                      </div>
 
                 <div class="form-group">
                   <label>تعداد موجودی محصول</label>
@@ -97,7 +109,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">تصاویر محصول</h3>
+              <h3 class="box-title"> تصویر شاخص محصول</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -106,7 +118,7 @@
 
                 <div class="input-group">
    <span class="input-group-btn">
-     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+     <a id="pic" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
        <i class="fa fa-picture-o"></i> Choose
      </a>
    </span>
@@ -116,22 +128,91 @@
 
             </div>
 
-
-
-
-
-
               <!-- /.box-body -->
 
 
           </div>
           <!-- /.box -->
 
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"> تصاویر  محصول</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+
+            <div class="box-body">
+              <div class="col-md-6">
+              <div class="input-group">
+             <span class="input-group-btn">
+               <a id="gallery_one" data-input="gallery_one_thumbnail" data-preview="gallery_one_holder" class="btn btn-primary">
+                 <i class="fa fa-picture-o"></i> Choose
+               </a>
+             </span>
+                <input id="gallery_one_thumbnail" class="form-control" type="text" name="gallery_one">
+              </div>
+              <img id="gallery_one_holder" style="margin-top:15px;max-height:100px;">
+              </div>
+              <div class="col-md-6">
+              <div class="input-group">
+               <span class="input-group-btn">
+                 <a id="gallery_two" data-input="gallery_two_thumbnail" data-preview="gallery_two_holder" class="btn btn-primary">
+                   <i class="fa fa-picture-o"></i> Choose
+                 </a>
+               </span>
+                <input id="gallery_two_thumbnail" class="form-control" type="text" name="gallery_two">
+              </div>
+                <img id="gallery_two_holder" style="margin-top:15px;max-height:100px;">
+              </div>
+            </div>
+
+            <!-- /.box-body -->
+
+
+          </div>
+
+
+
+
         </div>
 
 
               </form>
           <!-- /.box -->
+
+        <form role="form" method="POST" action="{{route('admin.category.save')}}"  >
+          @csrf
+          <div class="col-md-6">
+
+            <div class="box box-primary">
+              <div class="box-header with-border">
+                <h3 class="box-title"> افزودن دسته بندی جدید </h3>
+              </div>
+              <!-- /.box-header -->
+              <!-- form start -->
+
+              <div class="box-body">
+                <div class="col-md-6">
+
+                  <div class="form-group">
+                    <label>نام دسته بندی</label>
+                    <input type="text" class="form-control" name="category_title" placeholder="Enter ...">
+                  </div>
+
+              <!-- /.box-body -->
+
+
+            </div>
+
+                <div class="box-footer">
+                  <button type="submit" name="submit" class="btn btn-primary">ثبت دسته بندی</button>
+                </div>
+
+
+
+          </div>
+
+        </form>
 
         </div>
         <!--/.col (right) -->

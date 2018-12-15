@@ -20,6 +20,8 @@ class CreateProductsTable extends Migration
             $table->integer('stock');
             $table->double('price');
             $table->string('thumbnail');
+            $table->string('gallery_one');
+            $table->string('gallery_two');
             $table->timestamps();
         });
     }

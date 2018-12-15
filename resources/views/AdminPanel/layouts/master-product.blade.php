@@ -727,7 +727,12 @@
 <script type="text/javascript">
     //my code here
 
-    $('#lfm').filemanager('image');
+    $('#pic').filemanager('image');
+    $('#gallery_one').filemanager('image');
+    $('#gallery_two').filemanager('image');
 </script>
+
+
+
 </body>
 </html>

@@ -18,6 +18,14 @@
 								<img src="{{$item->thumbnail}}" alt="">
 							</div>
 
+									<div class="product-preview">
+										<img src="{{$item->gallery_one}}" alt="">
+									</div>
+
+									<div class="product-preview">
+										<img src="{{$item->gallery_two}}" alt="">
+									</div>
+
 
 						</div>
 
@@ -30,7 +38,13 @@
 							<div class="product-preview">
 								<img src="{{$item->thumbnail}}" alt="">
 							</div>
+							<div class="product-preview">
+								<img src="{{$item->gallery_one}}" alt="">
+							</div>
 
+							<div class="product-preview">
+								<img src="{{$item->gallery_two}}" alt="">
+							</div>
 
 						</div>
 					</div>
@@ -51,14 +65,17 @@
 								</div>
 								<a class="review-link" href="#">10 Review(s) | Add your review</a>
 							</div>
+
+							<div>
+								<h3 class="product-price">{{$item->price}}</h3>
+
+
+
+								<span class="product-available">موجودی : {{$item->stock}}</span>
+							</div>
+							 {!! $item->description !!}
 							@endforeach
 							@endif
-							<div>
-								<h3 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h3>
-								<span class="product-available">In Stock</span>
-							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
 							<div class="product-options">
 								<label>
 									Size
@@ -80,7 +97,7 @@
 								<div class="qty-label">
 									Qty
 									<div class="input-number">
-										<input type="number">
+										<input type="number" value="1">
 										<span class="qty-up">+</span>
 										<span class="qty-down">-</span>
 									</div>
@@ -128,7 +145,7 @@
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											{!! $item->description !!}
 										</div>
 									</div>
 								</div>

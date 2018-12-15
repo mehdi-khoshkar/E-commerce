@@ -26,6 +26,7 @@ Route::prefix('adminPanel')->group(function(){
     Route::get('/product', 'ProductController@index')->name('admin.product.index');
     Route::get('/addProduct', 'ProductController@add')->name('admin.product.add');
     Route::post('/saveProduct', 'ProductController@save')->name('admin.product.save');
+    Route::post('/saveCategory', 'CategoryController@save')->name('admin.category.save');
 
 
 });
